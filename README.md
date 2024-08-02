@@ -99,24 +99,6 @@ Q Company operates both physical stores and an e-commerce platform. This project
   - Revenue by Customer
   - Hourly Sales Analysis
 
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/q-company-data-pipeline.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Configure cron jobs:
-   - Set up batch and streaming cron jobs as per `My_crontab.txt` and `Crontab.txt`.
-
-4. Update configuration files as needed (e.g., file paths, Hive settings).
-
-5. Run scripts:
    - For batch processing, use:
      ```bash
      python ingestCode.py
