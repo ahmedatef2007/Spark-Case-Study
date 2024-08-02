@@ -19,6 +19,7 @@ Q Company operates both physical stores and an e-commerce platform. This project
 - **Hive:** Data warehouse for structured querying.
 - **Cron:** Schedules batch jobs.
 - **Kafka:** Manages real-time data feeds.
+![Uploading image.png…]()
 
 ## Data Model
 
