@@ -20,7 +20,7 @@ Q Company operates both physical stores and an e-commerce platform. This project
 - **Cron:** Schedules batch jobs.
 - **Kafka:** Manages real-time data feeds.
 
-                    ![image](https://github.com/user-attachments/assets/6fc6fcc2-8561-4b18-9deb-7f155a6df8c7)
+    ![image](https://github.com/user-attachments/assets/6fc6fcc2-8561-4b18-9deb-7f155a6df8c7)
 
 ## Data Model
 
