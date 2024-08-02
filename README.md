@@ -99,13 +99,13 @@ Q Company operates both physical stores and an e-commerce platform. This project
   - Revenue by Customer
   - Hourly Sales Analysis
 
-   - For batch processing, use:
+- For batch processing, use:
      ```bash
      python ingestCode.py
      python processing.py
      python daily_dump_hive.py
      ```
-   - For streaming, start Kafka and run:
+- For streaming, start Kafka and run:
      ```bash
      python producer.py
      jupyter notebook streaming.ipynb
