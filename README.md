@@ -1,7 +1,3 @@
-Here’s a sample GitHub README for your Q company case study project:
-
----
-
 # Q Company Data Pipeline
 
 ## Overview
