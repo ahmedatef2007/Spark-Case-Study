@@ -1,0 +1,10 @@
+# Runs every hour, sets the PATH, and executes the Python script ingestCode.py.
+0 * * * * PATH=/usr/bin:/bin:/opt/hadoop/bin /usr/bin/python3 /home/itversity/itversity-material/caseStudy/ingestCode.py >> /home/itversity/itversity-material/caseStudy/ingest_$(date +\%Y\%m\%d\%H\%M\%S).log 2>&1
+
+# Runs every hour at the 20th minute, sets the PATH, and executes the Spark job processing.py using spark-submit.
+20 * * * * PATH=/usr/bin:/bin:/opt/spark2/bin:/opt/hadoop/bin spark-submit --conf spark.pyspark.python=/usr/bin/python3 /home/itversity/itversity-material/caseStudy/processing.py >> /home/itversity/itversity-material/caseStudy/processing_$(date +\%Y\%m\%d\%H\%M\%S).log 2>&1
+
+# Runs daily at 1:00 AM, sets the PATH, and executes the Spark job daily_dumb_hive.py using spark-submit.
+0 1 * * *  PATH=/usr/bin:/bin:/opt/spark2/bin:/opt/hadoop/bin spark-submit --conf spark.pyspark.python=/usr/bin/python3 /home/itversity/itversity-material/caseStudy/daily_dumb_hive.py >> /home/itversity/itversity-material/caseStudy/daily_dumb_hive_$(date +\%Y\%m\%d\%H\%M\%S).log 2>&1
+
+

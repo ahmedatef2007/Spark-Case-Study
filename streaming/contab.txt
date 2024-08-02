@@ -1,0 +1,8 @@
+# compaction file to compact data every hour to prevent small file problem
+0 * * * * PATH=/usr/bin:/bin:/opt/hadoop/bin /usr/bin/python3 /home/itversity/st
+reaming/compaction.py >> /home/itversity/streaming/logs/compaction.log 2>&1
+
+# repair partitions in hive to see new partitions
+1 * * * * PATH=/usr/bin:/bin:/opt/spark2/bin:/opt/hadoop/bin spark-submit /home/
+itversity/streaming/hiveRepairPartition.py >> /home/itversity/streaming/logs/hiv
+eRepair.log 2>&1

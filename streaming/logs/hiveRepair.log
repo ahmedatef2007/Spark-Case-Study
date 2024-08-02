@@ -1,0 +1,716 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/spark-2.4.8-bin-hadoop2.7/jars/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2024-07-04 19:34:04,984 INFO spark.SparkContext: Running Spark version 2.4.8
+2024-07-04 19:34:05,021 INFO spark.SparkContext: Submitted application: hiveRepair
+2024-07-04 19:34:05,118 INFO spark.SecurityManager: Changing view acls to: itversity
+2024-07-04 19:34:05,118 INFO spark.SecurityManager: Changing modify acls to: itversity
+2024-07-04 19:34:05,118 INFO spark.SecurityManager: Changing view acls groups to: 
+2024-07-04 19:34:05,118 INFO spark.SecurityManager: Changing modify acls groups to: 
+2024-07-04 19:34:05,118 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(itversity); groups with view permissions: Set(); users  with modify permissions: Set(itversity); groups with modify permissions: Set()
+2024-07-04 19:34:05,602 INFO util.Utils: Successfully started service 'sparkDriver' on port 43037.
+2024-07-04 19:34:05,639 INFO spark.SparkEnv: Registering MapOutputTracker
+2024-07-04 19:34:05,678 INFO spark.SparkEnv: Registering BlockManagerMaster
+2024-07-04 19:34:05,682 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2024-07-04 19:34:05,682 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2024-07-04 19:34:05,699 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-80351c66-98a0-4c5c-916e-ab5e701b9885
+2024-07-04 19:34:05,725 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+2024-07-04 19:34:05,749 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2024-07-04 19:34:05,889 INFO util.log: Logging initialized @4157ms to org.spark_project.jetty.util.log.Slf4jLog
+2024-07-04 19:34:06,045 INFO server.Server: jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_312-8u312-b07-0ubuntu1~18.04-b07
+2024-07-04 19:34:06,093 INFO server.Server: Started @4362ms
+2024-07-04 19:34:06,172 INFO server.AbstractConnector: Started ServerConnector@7522e107{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 19:34:06,173 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2024-07-04 19:34:06,236 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@677ad98{/jobs,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,238 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3be7893c{/jobs/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,239 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@78fb44fd{/jobs/job,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,242 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4976cc3f{/jobs/job/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,243 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4e5f1244{/stages,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,244 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6ca16bde{/stages/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,245 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@57615705{/stages/stage,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,248 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@79eaf31e{/stages/stage/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,249 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@246e4a59{/stages/pool,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,251 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@47f3ce58{/stages/pool/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,253 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4dafac1f{/storage,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,255 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6373c4b7{/storage/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,258 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@35997602{/storage/rdd,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,260 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6c41efe7{/storage/rdd/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,261 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c3e6924{/environment,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,262 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@21954868{/environment/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,264 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5fc2133e{/executors,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,265 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3c1fe1f6{/executors/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,267 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@13c7d818{/executors/threadDump,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,269 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@181a1400{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,287 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@578ebfde{/static,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,288 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@102e04bd{/,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,291 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@10af9355{/api,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,292 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@73ff8a68{/jobs/job/kill,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,293 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4fcc441e{/stages/stage/kill,null,AVAILABLE,@Spark}
+2024-07-04 19:34:06,298 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://itvdelab:4040
+2024-07-04 19:34:06,444 INFO executor.Executor: Starting executor ID driver on host localhost
+2024-07-04 19:34:06,627 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41247.
+2024-07-04 19:34:06,628 INFO netty.NettyBlockTransferService: Server created on itvdelab:41247
+2024-07-04 19:34:06,631 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2024-07-04 19:34:06,668 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, itvdelab, 41247, None)
+2024-07-04 19:34:06,674 INFO storage.BlockManagerMasterEndpoint: Registering block manager itvdelab:41247 with 366.3 MB RAM, BlockManagerId(driver, itvdelab, 41247, None)
+2024-07-04 19:34:06,679 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, itvdelab, 41247, None)
+2024-07-04 19:34:06,680 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, itvdelab, 41247, None)
+2024-07-04 19:34:06,986 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d8b92b7{/metrics/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:08,935 INFO scheduler.EventLoggingListener: Logging events to hdfs:/spark2-logs/local-1720121646399
+2024-07-04 19:34:09,317 INFO internal.SharedState: loading hive config file: file:/opt/spark-2.4.8-bin-hadoop2.7/conf/hive-site.xml
+2024-07-04 19:34:09,371 INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/itversity/spark-warehouse').
+2024-07-04 19:34:09,372 INFO internal.SharedState: Warehouse path is 'file:/home/itversity/spark-warehouse'.
+2024-07-04 19:34:09,385 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7b2348b6{/SQL,null,AVAILABLE,@Spark}
+2024-07-04 19:34:09,386 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@739f3519{/SQL/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:09,388 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@545d7aa5{/SQL/execution,null,AVAILABLE,@Spark}
+2024-07-04 19:34:09,390 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@130f92a{/SQL/execution/json,null,AVAILABLE,@Spark}
+2024-07-04 19:34:09,392 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@60015d84{/static/sql,null,AVAILABLE,@Spark}
+2024-07-04 19:34:10,159 INFO state.StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+2024-07-04 19:34:13,421 INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+2024-07-04 19:34:14,832 INFO metastore.HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+2024-07-04 19:34:14,878 INFO metastore.ObjectStore: ObjectStore, initialize called
+2024-07-04 19:34:15,114 INFO DataNucleus.Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+2024-07-04 19:34:15,114 INFO DataNucleus.Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+2024-07-04 19:34:16,330 INFO metastore.ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+2024-07-04 19:34:19,062 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 19:34:19,063 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 19:34:19,569 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 19:34:19,569 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 19:34:19,771 INFO DataNucleus.Query: Reading in results for query "org.datanucleus.store.rdbms.query.SQLQuery@0" since the connection used is closing
+2024-07-04 19:34:19,775 INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is OTHER
+2024-07-04 19:34:19,779 INFO metastore.ObjectStore: Initialized ObjectStore
+2024-07-04 19:34:20,234 INFO metastore.HiveMetaStore: Added admin role in metastore
+2024-07-04 19:34:20,238 INFO metastore.HiveMetaStore: Added public role in metastore
+2024-07-04 19:34:20,351 INFO metastore.HiveMetaStore: No user is added in admin role, since config is empty
+2024-07-04 19:34:20,497 INFO metastore.HiveMetaStore: 0: get_all_databases
+2024-07-04 19:34:20,499 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_all_databases	
+2024-07-04 19:34:20,518 INFO metastore.HiveMetaStore: 0: get_functions: db=default pat=*
+2024-07-04 19:34:20,518 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+2024-07-04 19:34:20,520 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 19:34:20,709 INFO session.SessionState: Created local directory: /tmp/dfcaaffc-aa20-466a-ba01-7c99423063e1_resources
+2024-07-04 19:34:20,722 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/dfcaaffc-aa20-466a-ba01-7c99423063e1
+2024-07-04 19:34:20,725 INFO session.SessionState: Created local directory: /tmp/itversity/dfcaaffc-aa20-466a-ba01-7c99423063e1
+2024-07-04 19:34:20,736 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/dfcaaffc-aa20-466a-ba01-7c99423063e1/_tmp_space.db
+2024-07-04 19:34:20,741 INFO client.HiveClientImpl: Warehouse location for Hive client (version 1.2.2) is file:/home/itversity/spark-warehouse
+2024-07-04 19:34:20,755 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 19:34:20,755 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 19:34:20,767 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 19:34:20,768 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 19:34:20,776 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:20,777 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:20,936 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:20,937 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:21,072 INFO metastore.HiveMetaStore: 0: get_database: global_temp
+2024-07-04 19:34:21,072 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: global_temp	
+2024-07-04 19:34:21,074 WARN metastore.ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+2024-07-04 19:34:21,080 INFO command.AlterTableRecoverPartitionsCommand: Recover all the partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 19:34:21,116 WARN command.AlterTableRecoverPartitionsCommand: ignore hdfs://localhost:9000/user/itversity/casestudy/kafkastream/_spark_metadata
+2024-07-04 19:34:21,137 INFO command.AlterTableRecoverPartitionsCommand: Found 14 partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 19:34:21,140 INFO command.AlterTableRecoverPartitionsCommand: Gather the fast stats in parallel using 8 tasks.
+2024-07-04 19:34:21,531 INFO spark.SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+2024-07-04 19:34:21,573 INFO scheduler.DAGScheduler: Got job 0 (sql at NativeMethodAccessorImpl.java:0) with 8 output partitions
+2024-07-04 19:34:21,574 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0)
+2024-07-04 19:34:21,575 INFO scheduler.DAGScheduler: Parents of final stage: List()
+2024-07-04 19:34:21,579 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-07-04 19:34:21,633 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+2024-07-04 19:34:21,790 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 72.6 KB, free 366.2 MB)
+2024-07-04 19:34:21,848 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 26.4 KB, free 366.2 MB)
+2024-07-04 19:34:21,852 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on itvdelab:41247 (size: 26.4 KB, free: 366.3 MB)
+2024-07-04 19:34:21,855 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1184
+2024-07-04 19:34:21,886 INFO scheduler.DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+2024-07-04 19:34:21,888 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 8 tasks
+2024-07-04 19:34:21,997 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 19:34:22,005 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 19:34:22,006 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 19:34:22,007 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 19:34:22,009 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 19:34:22,010 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 19:34:22,011 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, executor driver, partition 6, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 19:34:22,011 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, executor driver, partition 7, PROCESS_LOCAL, 8060 bytes)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 2.0 in stage 0.0 (TID 2)
+2024-07-04 19:34:22,036 INFO executor.Executor: Running task 6.0 in stage 0.0 (TID 6)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 3.0 in stage 0.0 (TID 3)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 7.0 in stage 0.0 (TID 7)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 4.0 in stage 0.0 (TID 4)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 1.0 in stage 0.0 (TID 1)
+2024-07-04 19:34:22,036 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+2024-07-04 19:34:22,037 INFO executor.Executor: Running task 5.0 in stage 0.0 (TID 5)
+2024-07-04 19:34:22,290 INFO executor.Executor: Finished task 3.0 in stage 0.0 (TID 3). 1143 bytes result sent to driver
+2024-07-04 19:34:22,290 INFO executor.Executor: Finished task 7.0 in stage 0.0 (TID 7). 1141 bytes result sent to driver
+2024-07-04 19:34:22,290 INFO executor.Executor: Finished task 4.0 in stage 0.0 (TID 4). 1022 bytes result sent to driver
+2024-07-04 19:34:22,290 INFO executor.Executor: Finished task 6.0 in stage 0.0 (TID 6). 1143 bytes result sent to driver
+2024-07-04 19:34:22,291 INFO executor.Executor: Finished task 2.0 in stage 0.0 (TID 2). 1143 bytes result sent to driver
+2024-07-04 19:34:22,291 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 1022 bytes result sent to driver
+2024-07-04 19:34:22,292 INFO executor.Executor: Finished task 1.0 in stage 0.0 (TID 1). 1143 bytes result sent to driver
+2024-07-04 19:34:22,293 INFO executor.Executor: Finished task 5.0 in stage 0.0 (TID 5). 1143 bytes result sent to driver
+2024-07-04 19:34:22,342 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 333 ms on localhost (executor driver) (1/8)
+2024-07-04 19:34:22,347 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 342 ms on localhost (executor driver) (2/8)
+2024-07-04 19:34:22,347 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 388 ms on localhost (executor driver) (3/8)
+2024-07-04 19:34:22,347 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 338 ms on localhost (executor driver) (4/8)
+2024-07-04 19:34:22,348 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 338 ms on localhost (executor driver) (5/8)
+2024-07-04 19:34:22,348 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 342 ms on localhost (executor driver) (6/8)
+2024-07-04 19:34:22,348 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 341 ms on localhost (executor driver) (7/8)
+2024-07-04 19:34:22,349 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 338 ms on localhost (executor driver) (8/8)
+2024-07-04 19:34:22,351 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2024-07-04 19:34:22,373 INFO scheduler.DAGScheduler: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0) finished in 0.686 s
+2024-07-04 19:34:22,382 INFO scheduler.DAGScheduler: Job 0 finished: sql at NativeMethodAccessorImpl.java:0, took 0.851023 s
+2024-07-04 19:34:22,392 INFO command.AlterTableRecoverPartitionsCommand: Finished to gather the fast stats for all 14 partitions.
+2024-07-04 19:34:22,399 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 19:34:22,399 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 19:34:22,404 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,404 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,447 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 19:34:22,448 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 19:34:22,452 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,452 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,483 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,483 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,520 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,521 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,548 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,549 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,592 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,592 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,711 INFO metastore.HiveMetaStore: 0: add_partitions
+2024-07-04 19:34:22,714 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=add_partitions	
+2024-07-04 19:34:22,773 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=10229, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,777 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 16], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=16, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=34739, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,780 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 19], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=19, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=12535, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,784 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-02, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-02/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7136, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,787 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 12], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=12, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8099, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,790 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 13], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=13, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7433, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,793 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8544, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,796 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 20], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=20, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7474, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,799 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=9605, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,801 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7920, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,802 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 17], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=17, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7230, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,805 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 18], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=18, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=12, totalSize=36320, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,807 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 3], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=3, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=6991, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,809 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 4], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=4, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7383, transient_lastDdlTime=1720121662}) as it already exists
+2024-07-04 19:34:22,816 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 19:34:22,816 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 19:34:22,820 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,820 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,850 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,850 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:22,877 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 19:34:22,877 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 19:34:23,035 INFO metastore.HiveMetaStore: 0: alter_table: db=default tbl=kafka newtbl=kafka
+2024-07-04 19:34:23,035 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=alter_table: db=default tbl=kafka newtbl=kafka	
+2024-07-04 19:34:23,161 INFO command.AlterTableRecoverPartitionsCommand: Recovered all partitions (14).
+2024-07-04 19:34:24,133 INFO codegen.CodeGenerator: Code generated in 497.798298 ms
+++
+||
+++
+++
+
+2024-07-04 19:34:24,169 INFO server.AbstractConnector: Stopped Spark@7522e107{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 19:34:24,172 INFO ui.SparkUI: Stopped Spark web UI at http://itvdelab:4040
+2024-07-04 19:34:24,386 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+2024-07-04 19:34:24,411 INFO memory.MemoryStore: MemoryStore cleared
+2024-07-04 19:34:24,412 INFO storage.BlockManager: BlockManager stopped
+2024-07-04 19:34:24,413 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+2024-07-04 19:34:24,417 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+2024-07-04 19:34:24,434 INFO spark.SparkContext: Successfully stopped SparkContext
+2024-07-04 19:34:24,611 INFO util.ShutdownHookManager: Shutdown hook called
+2024-07-04 19:34:24,612 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-897d2335-92c8-48b4-ae5c-8b7b2701c3ff
+2024-07-04 19:34:24,619 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-386a7c9d-cbcb-4710-9c43-6f929704f086
+2024-07-04 19:34:24,625 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-386a7c9d-cbcb-4710-9c43-6f929704f086/pyspark-e3c063c4-3279-4f50-abb0-22903551a8c0
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/spark-2.4.8-bin-hadoop2.7/jars/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2024-07-04 20:00:05,994 INFO spark.SparkContext: Running Spark version 2.4.8
+2024-07-04 20:00:06,033 INFO spark.SparkContext: Submitted application: hiveRepair
+2024-07-04 20:00:06,130 INFO spark.SecurityManager: Changing view acls to: itversity
+2024-07-04 20:00:06,130 INFO spark.SecurityManager: Changing modify acls to: itversity
+2024-07-04 20:00:06,130 INFO spark.SecurityManager: Changing view acls groups to: 
+2024-07-04 20:00:06,130 INFO spark.SecurityManager: Changing modify acls groups to: 
+2024-07-04 20:00:06,131 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(itversity); groups with view permissions: Set(); users  with modify permissions: Set(itversity); groups with modify permissions: Set()
+2024-07-04 20:00:06,757 INFO util.Utils: Successfully started service 'sparkDriver' on port 37187.
+2024-07-04 20:00:06,844 INFO spark.SparkEnv: Registering MapOutputTracker
+2024-07-04 20:00:06,876 INFO spark.SparkEnv: Registering BlockManagerMaster
+2024-07-04 20:00:06,880 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2024-07-04 20:00:06,881 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2024-07-04 20:00:06,896 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-f5b49f0c-7041-4c55-9561-87a4500bfe3a
+2024-07-04 20:00:06,915 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+2024-07-04 20:00:06,936 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2024-07-04 20:00:07,112 INFO util.log: Logging initialized @5032ms to org.spark_project.jetty.util.log.Slf4jLog
+2024-07-04 20:00:07,290 INFO server.Server: jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_312-8u312-b07-0ubuntu1~18.04-b07
+2024-07-04 20:00:07,368 INFO server.Server: Started @5291ms
+2024-07-04 20:00:07,458 INFO server.AbstractConnector: Started ServerConnector@4284e9cf{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 20:00:07,458 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2024-07-04 20:00:07,525 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1ac34b56{/jobs,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,527 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2087e7e4{/jobs/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,528 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@48569ba2{/jobs/job,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,530 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1b06165e{/jobs/job/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,531 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4217a1d{/stages,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,533 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@78567ab0{/stages/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,534 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@367723a6{/stages/stage,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,536 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@595e6cea{/stages/stage/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,538 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@56bb0e74{/stages/pool,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,539 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@8b32584{/stages/pool/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,542 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a380af7{/storage,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,544 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2b1a66{/storage/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,546 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@e6d6cb9{/storage/rdd,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,547 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1fe3f7f5{/storage/rdd/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,549 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@75e6294c{/environment,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,550 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2dc6f5bc{/environment/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,552 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@48ab4c19{/executors,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,553 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@48f756a6{/executors/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,555 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@c1faabd{/executors/threadDump,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,556 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@16eec597{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,574 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4b788d7{/static,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,575 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3ece6806{/,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,577 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@34cd8267{/api,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,578 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@24e4ea17{/jobs/job/kill,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,580 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@50eaa938{/stages/stage/kill,null,AVAILABLE,@Spark}
+2024-07-04 20:00:07,583 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://itvdelab:4040
+2024-07-04 20:00:07,730 INFO executor.Executor: Starting executor ID driver on host localhost
+2024-07-04 20:00:07,927 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43653.
+2024-07-04 20:00:07,929 INFO netty.NettyBlockTransferService: Server created on itvdelab:43653
+2024-07-04 20:00:07,932 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2024-07-04 20:00:07,976 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, itvdelab, 43653, None)
+2024-07-04 20:00:07,982 INFO storage.BlockManagerMasterEndpoint: Registering block manager itvdelab:43653 with 366.3 MB RAM, BlockManagerId(driver, itvdelab, 43653, None)
+2024-07-04 20:00:07,989 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, itvdelab, 43653, None)
+2024-07-04 20:00:07,991 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, itvdelab, 43653, None)
+2024-07-04 20:00:08,331 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1ec54fea{/metrics/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:10,278 INFO scheduler.EventLoggingListener: Logging events to hdfs:/spark2-logs/local-1720123207688
+2024-07-04 20:00:10,720 INFO internal.SharedState: loading hive config file: file:/opt/spark-2.4.8-bin-hadoop2.7/conf/hive-site.xml
+2024-07-04 20:00:10,831 INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/itversity/spark-warehouse').
+2024-07-04 20:00:10,832 INFO internal.SharedState: Warehouse path is 'file:/home/itversity/spark-warehouse'.
+2024-07-04 20:00:10,852 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@41f4ea09{/SQL,null,AVAILABLE,@Spark}
+2024-07-04 20:00:10,854 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7498b359{/SQL/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:10,858 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@19d6aea2{/SQL/execution,null,AVAILABLE,@Spark}
+2024-07-04 20:00:10,861 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@246c092{/SQL/execution/json,null,AVAILABLE,@Spark}
+2024-07-04 20:00:10,865 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6c652f0d{/static/sql,null,AVAILABLE,@Spark}
+2024-07-04 20:00:12,428 INFO state.StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+2024-07-04 20:00:16,776 INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+2024-07-04 20:00:17,968 INFO metastore.HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+2024-07-04 20:00:18,018 INFO metastore.ObjectStore: ObjectStore, initialize called
+2024-07-04 20:00:18,424 INFO DataNucleus.Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+2024-07-04 20:00:18,424 INFO DataNucleus.Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+2024-07-04 20:00:19,550 INFO metastore.ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+2024-07-04 20:00:21,447 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 20:00:21,448 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 20:00:21,928 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 20:00:21,928 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 20:00:22,094 INFO DataNucleus.Query: Reading in results for query "org.datanucleus.store.rdbms.query.SQLQuery@0" since the connection used is closing
+2024-07-04 20:00:22,098 INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is OTHER
+2024-07-04 20:00:22,102 INFO metastore.ObjectStore: Initialized ObjectStore
+2024-07-04 20:00:22,373 INFO metastore.HiveMetaStore: Added admin role in metastore
+2024-07-04 20:00:22,376 INFO metastore.HiveMetaStore: Added public role in metastore
+2024-07-04 20:00:22,457 INFO metastore.HiveMetaStore: No user is added in admin role, since config is empty
+2024-07-04 20:00:22,580 INFO metastore.HiveMetaStore: 0: get_all_databases
+2024-07-04 20:00:22,582 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_all_databases	
+2024-07-04 20:00:22,597 INFO metastore.HiveMetaStore: 0: get_functions: db=default pat=*
+2024-07-04 20:00:22,597 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+2024-07-04 20:00:22,599 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 20:00:22,690 INFO metastore.HiveMetaStore: 0: get_functions: db=iti_dwh pat=*
+2024-07-04 20:00:22,690 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_functions: db=iti_dwh pat=*	
+2024-07-04 20:00:22,755 INFO session.SessionState: Created local directory: /tmp/866e801e-1ff3-45b8-af93-876618b9144c_resources
+2024-07-04 20:00:22,774 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/866e801e-1ff3-45b8-af93-876618b9144c
+2024-07-04 20:00:22,778 INFO session.SessionState: Created local directory: /tmp/itversity/866e801e-1ff3-45b8-af93-876618b9144c
+2024-07-04 20:00:22,785 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/866e801e-1ff3-45b8-af93-876618b9144c/_tmp_space.db
+2024-07-04 20:00:22,789 INFO client.HiveClientImpl: Warehouse location for Hive client (version 1.2.2) is file:/home/itversity/spark-warehouse
+2024-07-04 20:00:22,800 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 20:00:22,801 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 20:00:22,812 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 20:00:22,812 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 20:00:22,820 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:22,820 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:22,955 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:22,955 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:23,075 INFO metastore.HiveMetaStore: 0: get_database: global_temp
+2024-07-04 20:00:23,075 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: global_temp	
+2024-07-04 20:00:23,077 WARN metastore.ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+2024-07-04 20:00:23,081 INFO command.AlterTableRecoverPartitionsCommand: Recover all the partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 20:00:23,117 WARN command.AlterTableRecoverPartitionsCommand: ignore hdfs://localhost:9000/user/itversity/casestudy/kafkastream/_spark_metadata
+2024-07-04 20:00:23,135 INFO command.AlterTableRecoverPartitionsCommand: Found 14 partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 20:00:23,139 INFO command.AlterTableRecoverPartitionsCommand: Gather the fast stats in parallel using 8 tasks.
+2024-07-04 20:00:23,466 INFO spark.SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+2024-07-04 20:00:23,497 INFO scheduler.DAGScheduler: Got job 0 (sql at NativeMethodAccessorImpl.java:0) with 8 output partitions
+2024-07-04 20:00:23,498 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0)
+2024-07-04 20:00:23,499 INFO scheduler.DAGScheduler: Parents of final stage: List()
+2024-07-04 20:00:23,501 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-07-04 20:00:23,512 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+2024-07-04 20:00:23,635 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 72.6 KB, free 366.2 MB)
+2024-07-04 20:00:23,711 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 26.4 KB, free 366.2 MB)
+2024-07-04 20:00:23,717 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on itvdelab:43653 (size: 26.4 KB, free: 366.3 MB)
+2024-07-04 20:00:23,721 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1184
+2024-07-04 20:00:23,772 INFO scheduler.DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+2024-07-04 20:00:23,774 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 8 tasks
+2024-07-04 20:00:23,871 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 20:00:23,879 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 20:00:23,881 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 20:00:23,882 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 20:00:23,884 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 20:00:23,885 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 20:00:23,886 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, executor driver, partition 6, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 20:00:23,887 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, executor driver, partition 7, PROCESS_LOCAL, 8060 bytes)
+2024-07-04 20:00:23,910 INFO executor.Executor: Running task 3.0 in stage 0.0 (TID 3)
+2024-07-04 20:00:23,911 INFO executor.Executor: Running task 7.0 in stage 0.0 (TID 7)
+2024-07-04 20:00:23,911 INFO executor.Executor: Running task 1.0 in stage 0.0 (TID 1)
+2024-07-04 20:00:23,910 INFO executor.Executor: Running task 6.0 in stage 0.0 (TID 6)
+2024-07-04 20:00:23,910 INFO executor.Executor: Running task 4.0 in stage 0.0 (TID 4)
+2024-07-04 20:00:23,911 INFO executor.Executor: Running task 5.0 in stage 0.0 (TID 5)
+2024-07-04 20:00:23,910 INFO executor.Executor: Running task 2.0 in stage 0.0 (TID 2)
+2024-07-04 20:00:23,910 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+2024-07-04 20:00:24,166 INFO executor.Executor: Finished task 6.0 in stage 0.0 (TID 6). 1143 bytes result sent to driver
+2024-07-04 20:00:24,167 INFO executor.Executor: Finished task 5.0 in stage 0.0 (TID 5). 1143 bytes result sent to driver
+2024-07-04 20:00:24,167 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 1022 bytes result sent to driver
+2024-07-04 20:00:24,167 INFO executor.Executor: Finished task 3.0 in stage 0.0 (TID 3). 1143 bytes result sent to driver
+2024-07-04 20:00:24,167 INFO executor.Executor: Finished task 1.0 in stage 0.0 (TID 1). 1143 bytes result sent to driver
+2024-07-04 20:00:24,168 INFO executor.Executor: Finished task 7.0 in stage 0.0 (TID 7). 1098 bytes result sent to driver
+2024-07-04 20:00:24,168 INFO executor.Executor: Finished task 2.0 in stage 0.0 (TID 2). 1143 bytes result sent to driver
+2024-07-04 20:00:24,170 INFO executor.Executor: Finished task 4.0 in stage 0.0 (TID 4). 1022 bytes result sent to driver
+2024-07-04 20:00:24,234 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 348 ms on localhost (executor driver) (1/8)
+2024-07-04 20:00:24,240 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 355 ms on localhost (executor driver) (2/8)
+2024-07-04 20:00:24,240 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 356 ms on localhost (executor driver) (3/8)
+2024-07-04 20:00:24,242 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 361 ms on localhost (executor driver) (4/8)
+2024-07-04 20:00:24,244 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 357 ms on localhost (executor driver) (5/8)
+2024-07-04 20:00:24,246 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 371 ms on localhost (executor driver) (6/8)
+2024-07-04 20:00:24,246 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 364 ms on localhost (executor driver) (7/8)
+2024-07-04 20:00:24,250 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 417 ms on localhost (executor driver) (8/8)
+2024-07-04 20:00:24,253 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2024-07-04 20:00:24,265 INFO scheduler.DAGScheduler: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0) finished in 0.721 s
+2024-07-04 20:00:24,275 INFO scheduler.DAGScheduler: Job 0 finished: sql at NativeMethodAccessorImpl.java:0, took 0.808442 s
+2024-07-04 20:00:24,284 INFO command.AlterTableRecoverPartitionsCommand: Finished to gather the fast stats for all 14 partitions.
+2024-07-04 20:00:24,291 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 20:00:24,291 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 20:00:24,295 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,295 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,335 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 20:00:24,335 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 20:00:24,338 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,339 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,362 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,362 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,392 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,392 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,420 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,420 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,454 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,454 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,558 INFO metastore.HiveMetaStore: 0: add_partitions
+2024-07-04 20:00:24,558 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=add_partitions	
+2024-07-04 20:00:24,598 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=10229, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,602 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 16], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=16, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=34739, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,606 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 19], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=19, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=12535, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,610 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-02, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-02/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7136, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,612 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 12], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=12, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8099, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,615 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 13], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=13, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7433, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,618 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8544, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,622 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 20], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=20, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7474, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,625 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=9605, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,628 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7920, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,631 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 17], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=17, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7230, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,633 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 18], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=18, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=1, totalSize=7160, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,635 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 3], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=3, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=6991, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,637 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 4], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=4, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7383, transient_lastDdlTime=1720123224}) as it already exists
+2024-07-04 20:00:24,642 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 20:00:24,642 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 20:00:24,645 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,645 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,673 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,673 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,706 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 20:00:24,707 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 20:00:24,851 INFO metastore.HiveMetaStore: 0: alter_table: db=default tbl=kafka newtbl=kafka
+2024-07-04 20:00:24,851 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=alter_table: db=default tbl=kafka newtbl=kafka	
+2024-07-04 20:00:24,955 INFO command.AlterTableRecoverPartitionsCommand: Recovered all partitions (14).
+2024-07-04 20:00:25,824 INFO spark.ContextCleaner: Cleaned accumulator 5
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 17
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 12
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 24
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 15
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 21
+2024-07-04 20:00:25,825 INFO spark.ContextCleaner: Cleaned accumulator 7
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 11
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 19
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 13
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 9
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 23
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 8
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 2
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 3
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 10
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 16
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 18
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 20
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 22
+2024-07-04 20:00:25,826 INFO spark.ContextCleaner: Cleaned accumulator 4
+2024-07-04 20:00:25,882 INFO codegen.CodeGenerator: Code generated in 574.589034 ms
+2024-07-04 20:00:25,886 INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on itvdelab:43653 in memory (size: 26.4 KB, free: 366.3 MB)
+2024-07-04 20:00:25,895 INFO spark.ContextCleaner: Cleaned accumulator 25
+2024-07-04 20:00:25,895 INFO spark.ContextCleaner: Cleaned accumulator 1
+2024-07-04 20:00:25,895 INFO spark.ContextCleaner: Cleaned accumulator 6
+2024-07-04 20:00:25,895 INFO spark.ContextCleaner: Cleaned accumulator 14
+++
+||
+++
+++
+
+2024-07-04 20:00:25,913 INFO server.AbstractConnector: Stopped Spark@4284e9cf{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 20:00:25,916 INFO ui.SparkUI: Stopped Spark web UI at http://itvdelab:4040
+2024-07-04 20:00:26,024 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+2024-07-04 20:00:26,063 INFO memory.MemoryStore: MemoryStore cleared
+2024-07-04 20:00:26,064 INFO storage.BlockManager: BlockManager stopped
+2024-07-04 20:00:26,066 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+2024-07-04 20:00:26,072 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+2024-07-04 20:00:26,087 INFO spark.SparkContext: Successfully stopped SparkContext
+2024-07-04 20:00:26,528 INFO util.ShutdownHookManager: Shutdown hook called
+2024-07-04 20:00:26,531 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-e3f3bea1-8fee-474a-ae29-0ba90ca5cb39/pyspark-1fe23fd0-8b54-4759-8f04-7899670837cd
+2024-07-04 20:00:26,540 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-e3f3bea1-8fee-474a-ae29-0ba90ca5cb39
+2024-07-04 20:00:26,548 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-0518b479-52fe-4cdb-9bab-3594b97eb712
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/spark-2.4.8-bin-hadoop2.7/jars/slf4j-log4j12-1.7.16.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2024-07-04 21:01:05,071 INFO spark.SparkContext: Running Spark version 2.4.8
+2024-07-04 21:01:05,108 INFO spark.SparkContext: Submitted application: hiveRepair
+2024-07-04 21:01:05,211 INFO spark.SecurityManager: Changing view acls to: itversity
+2024-07-04 21:01:05,211 INFO spark.SecurityManager: Changing modify acls to: itversity
+2024-07-04 21:01:05,211 INFO spark.SecurityManager: Changing view acls groups to: 
+2024-07-04 21:01:05,211 INFO spark.SecurityManager: Changing modify acls groups to: 
+2024-07-04 21:01:05,212 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(itversity); groups with view permissions: Set(); users  with modify permissions: Set(itversity); groups with modify permissions: Set()
+2024-07-04 21:01:05,805 INFO util.Utils: Successfully started service 'sparkDriver' on port 43881.
+2024-07-04 21:01:05,840 INFO spark.SparkEnv: Registering MapOutputTracker
+2024-07-04 21:01:05,865 INFO spark.SparkEnv: Registering BlockManagerMaster
+2024-07-04 21:01:05,870 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2024-07-04 21:01:05,870 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2024-07-04 21:01:05,883 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-400f63e2-8514-468b-9fdb-c063c6e5897d
+2024-07-04 21:01:05,906 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+2024-07-04 21:01:05,928 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2024-07-04 21:01:06,060 INFO util.log: Logging initialized @3958ms to org.spark_project.jetty.util.log.Slf4jLog
+2024-07-04 21:01:06,203 INFO server.Server: jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_312-8u312-b07-0ubuntu1~18.04-b07
+2024-07-04 21:01:06,249 INFO server.Server: Started @4149ms
+2024-07-04 21:01:06,312 INFO server.AbstractConnector: Started ServerConnector@700b6f7{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 21:01:06,312 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2024-07-04 21:01:06,362 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4da7c968{/jobs,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,363 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@19aacf5e{/jobs/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,364 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@10914d26{/jobs/job,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,366 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@751b0f3f{/jobs/job/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,368 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a04fefd{/stages,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,369 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@20667ce6{/stages/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,370 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@12d6c2f{/stages/stage,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,373 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@229ec23e{/stages/stage/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,374 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@48389e56{/stages/pool,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,376 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@73af526a{/stages/pool/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,379 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@223f2c8b{/storage,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,381 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@766485c0{/storage/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,383 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7aa26f74{/storage/rdd,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,384 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@73975e48{/storage/rdd/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,385 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@28977fc5{/environment,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,387 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7a8fb592{/environment/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,389 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@133fac78{/executors,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,390 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5a93d549{/executors/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,392 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4969f089{/executors/threadDump,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,394 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4e4dff13{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,415 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@20ffc6ce{/static,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,417 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5bfffc64{/,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,421 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@333aa9a9{/api,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,423 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3314cdec{/jobs/job/kill,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,425 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5653cf80{/stages/stage/kill,null,AVAILABLE,@Spark}
+2024-07-04 21:01:06,428 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://itvdelab:4040
+2024-07-04 21:01:06,621 INFO executor.Executor: Starting executor ID driver on host localhost
+2024-07-04 21:01:06,812 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44979.
+2024-07-04 21:01:06,813 INFO netty.NettyBlockTransferService: Server created on itvdelab:44979
+2024-07-04 21:01:06,817 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2024-07-04 21:01:06,877 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, itvdelab, 44979, None)
+2024-07-04 21:01:06,892 INFO storage.BlockManagerMasterEndpoint: Registering block manager itvdelab:44979 with 366.3 MB RAM, BlockManagerId(driver, itvdelab, 44979, None)
+2024-07-04 21:01:06,944 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, itvdelab, 44979, None)
+2024-07-04 21:01:06,945 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, itvdelab, 44979, None)
+2024-07-04 21:01:07,372 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2b07a0a8{/metrics/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:09,776 INFO scheduler.EventLoggingListener: Logging events to hdfs:/spark2-logs/local-1720126866552
+2024-07-04 21:01:10,382 INFO internal.SharedState: loading hive config file: file:/opt/spark-2.4.8-bin-hadoop2.7/conf/hive-site.xml
+2024-07-04 21:01:10,454 INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/itversity/spark-warehouse').
+2024-07-04 21:01:10,455 INFO internal.SharedState: Warehouse path is 'file:/home/itversity/spark-warehouse'.
+2024-07-04 21:01:10,469 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5edc6e17{/SQL,null,AVAILABLE,@Spark}
+2024-07-04 21:01:10,471 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@72cf063e{/SQL/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:10,472 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d2b11fc{/SQL/execution,null,AVAILABLE,@Spark}
+2024-07-04 21:01:10,473 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1aac2a9{/SQL/execution/json,null,AVAILABLE,@Spark}
+2024-07-04 21:01:10,475 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@254265e{/static/sql,null,AVAILABLE,@Spark}
+2024-07-04 21:01:11,556 INFO state.StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+2024-07-04 21:01:14,584 INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+2024-07-04 21:01:15,662 INFO metastore.HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+2024-07-04 21:01:15,706 INFO metastore.ObjectStore: ObjectStore, initialize called
+2024-07-04 21:01:15,946 INFO DataNucleus.Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+2024-07-04 21:01:15,946 INFO DataNucleus.Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+2024-07-04 21:01:16,989 INFO metastore.ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+2024-07-04 21:01:18,708 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 21:01:18,709 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 21:01:19,387 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 21:01:19,387 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 21:01:19,537 INFO DataNucleus.Query: Reading in results for query "org.datanucleus.store.rdbms.query.SQLQuery@0" since the connection used is closing
+2024-07-04 21:01:19,540 INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is OTHER
+2024-07-04 21:01:19,543 INFO metastore.ObjectStore: Initialized ObjectStore
+2024-07-04 21:01:19,806 INFO metastore.HiveMetaStore: Added admin role in metastore
+2024-07-04 21:01:19,809 INFO metastore.HiveMetaStore: Added public role in metastore
+2024-07-04 21:01:19,887 INFO metastore.HiveMetaStore: No user is added in admin role, since config is empty
+2024-07-04 21:01:19,998 INFO metastore.HiveMetaStore: 0: get_all_databases
+2024-07-04 21:01:20,000 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_all_databases	
+2024-07-04 21:01:20,015 INFO metastore.HiveMetaStore: 0: get_functions: db=default pat=*
+2024-07-04 21:01:20,016 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+2024-07-04 21:01:20,017 INFO DataNucleus.Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+2024-07-04 21:01:20,104 INFO metastore.HiveMetaStore: 0: get_functions: db=iti_dwh pat=*
+2024-07-04 21:01:20,104 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_functions: db=iti_dwh pat=*	
+2024-07-04 21:01:20,157 INFO session.SessionState: Created local directory: /tmp/308f83a7-591d-4f47-9dff-cde7de317f09_resources
+2024-07-04 21:01:20,170 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/308f83a7-591d-4f47-9dff-cde7de317f09
+2024-07-04 21:01:20,173 INFO session.SessionState: Created local directory: /tmp/itversity/308f83a7-591d-4f47-9dff-cde7de317f09
+2024-07-04 21:01:20,180 INFO session.SessionState: Created HDFS directory: /tmp/hive/itversity/308f83a7-591d-4f47-9dff-cde7de317f09/_tmp_space.db
+2024-07-04 21:01:20,184 INFO client.HiveClientImpl: Warehouse location for Hive client (version 1.2.2) is file:/home/itversity/spark-warehouse
+2024-07-04 21:01:20,196 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 21:01:20,196 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 21:01:20,207 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 21:01:20,207 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 21:01:20,214 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:20,214 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:20,348 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:20,349 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:20,452 INFO metastore.HiveMetaStore: 0: get_database: global_temp
+2024-07-04 21:01:20,452 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: global_temp	
+2024-07-04 21:01:20,454 WARN metastore.ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+2024-07-04 21:01:20,458 INFO command.AlterTableRecoverPartitionsCommand: Recover all the partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 21:01:20,492 WARN command.AlterTableRecoverPartitionsCommand: ignore hdfs://localhost:9000/user/itversity/casestudy/kafkastream/_spark_metadata
+2024-07-04 21:01:20,512 INFO command.AlterTableRecoverPartitionsCommand: Found 14 partitions in hdfs://localhost:9000/user/itversity/casestudy/kafkastream
+2024-07-04 21:01:20,514 INFO command.AlterTableRecoverPartitionsCommand: Gather the fast stats in parallel using 8 tasks.
+2024-07-04 21:01:20,778 INFO spark.SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+2024-07-04 21:01:20,803 INFO scheduler.DAGScheduler: Got job 0 (sql at NativeMethodAccessorImpl.java:0) with 8 output partitions
+2024-07-04 21:01:20,804 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0)
+2024-07-04 21:01:20,805 INFO scheduler.DAGScheduler: Parents of final stage: List()
+2024-07-04 21:01:20,807 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-07-04 21:01:20,817 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+2024-07-04 21:01:20,914 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 72.6 KB, free 366.2 MB)
+2024-07-04 21:01:20,957 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 26.4 KB, free 366.2 MB)
+2024-07-04 21:01:20,961 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on itvdelab:44979 (size: 26.4 KB, free: 366.3 MB)
+2024-07-04 21:01:20,964 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1184
+2024-07-04 21:01:20,994 INFO scheduler.DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at sql at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+2024-07-04 21:01:20,996 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 8 tasks
+2024-07-04 21:01:21,071 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 21:01:21,080 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 21:01:21,081 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 21:01:21,083 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 21:01:21,084 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 7965 bytes)
+2024-07-04 21:01:21,086 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 21:01:21,087 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, executor driver, partition 6, PROCESS_LOCAL, 8062 bytes)
+2024-07-04 21:01:21,088 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, executor driver, partition 7, PROCESS_LOCAL, 8060 bytes)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 6.0 in stage 0.0 (TID 6)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+2024-07-04 21:01:21,106 INFO executor.Executor: Running task 1.0 in stage 0.0 (TID 1)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 2.0 in stage 0.0 (TID 2)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 7.0 in stage 0.0 (TID 7)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 5.0 in stage 0.0 (TID 5)
+2024-07-04 21:01:21,105 INFO executor.Executor: Running task 3.0 in stage 0.0 (TID 3)
+2024-07-04 21:01:21,106 INFO executor.Executor: Running task 4.0 in stage 0.0 (TID 4)
+2024-07-04 21:01:21,290 INFO executor.Executor: Finished task 3.0 in stage 0.0 (TID 3). 1143 bytes result sent to driver
+2024-07-04 21:01:21,290 INFO executor.Executor: Finished task 1.0 in stage 0.0 (TID 1). 1143 bytes result sent to driver
+2024-07-04 21:01:21,291 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 979 bytes result sent to driver
+2024-07-04 21:01:21,291 INFO executor.Executor: Finished task 6.0 in stage 0.0 (TID 6). 1143 bytes result sent to driver
+2024-07-04 21:01:21,290 INFO executor.Executor: Finished task 2.0 in stage 0.0 (TID 2). 1143 bytes result sent to driver
+2024-07-04 21:01:21,290 INFO executor.Executor: Finished task 4.0 in stage 0.0 (TID 4). 1022 bytes result sent to driver
+2024-07-04 21:01:21,290 INFO executor.Executor: Finished task 7.0 in stage 0.0 (TID 7). 1141 bytes result sent to driver
+2024-07-04 21:01:21,291 INFO executor.Executor: Finished task 5.0 in stage 0.0 (TID 5). 1143 bytes result sent to driver
+2024-07-04 21:01:21,334 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 242 ms on localhost (executor driver) (1/8)
+2024-07-04 21:01:21,340 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 257 ms on localhost (executor driver) (2/8)
+2024-07-04 21:01:21,341 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 257 ms on localhost (executor driver) (3/8)
+2024-07-04 21:01:21,342 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 255 ms on localhost (executor driver) (4/8)
+2024-07-04 21:01:21,342 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 261 ms on localhost (executor driver) (5/8)
+2024-07-04 21:01:21,344 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 257 ms on localhost (executor driver) (6/8)
+2024-07-04 21:01:21,345 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 265 ms on localhost (executor driver) (7/8)
+2024-07-04 21:01:21,345 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 307 ms on localhost (executor driver) (8/8)
+2024-07-04 21:01:21,347 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2024-07-04 21:01:21,358 INFO scheduler.DAGScheduler: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0) finished in 0.514 s
+2024-07-04 21:01:21,366 INFO scheduler.DAGScheduler: Job 0 finished: sql at NativeMethodAccessorImpl.java:0, took 0.587200 s
+2024-07-04 21:01:21,374 INFO command.AlterTableRecoverPartitionsCommand: Finished to gather the fast stats for all 14 partitions.
+2024-07-04 21:01:21,381 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 21:01:21,382 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 21:01:21,386 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,386 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,426 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 21:01:21,426 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 21:01:21,430 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,430 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,453 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,454 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,483 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,484 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,507 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,507 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,539 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,540 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,648 INFO metastore.HiveMetaStore: 0: add_partitions
+2024-07-04 21:01:21,649 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=add_partitions	
+2024-07-04 21:01:21,683 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=10229, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,687 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 16], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=16, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=34739, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,691 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-06-29, 19], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-06-29/event_hour=19, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=12535, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,695 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-02, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-02/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7136, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,697 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 12], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=12, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8099, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,700 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 13], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=13, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7433, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,702 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=8544, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,705 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-03, 20], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-03/event_hour=20, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7474, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,708 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 11], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=11, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=9605, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,710 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 15], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=15, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7920, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,712 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 17], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=17, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7230, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,714 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 18], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=18, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=1, totalSize=7160, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,716 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 3], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=3, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=6991, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,718 INFO metastore.HiveMetaStore: Not adding partition Partition(values:[2024-07-04, 4], dbName:default, tableName:kafka, createTime:0, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:eventtype, type:string, comment:null), FieldSchema(name:customerid, type:string, comment:null), FieldSchema(name:productid, type:string, comment:null), FieldSchema(name:timestamp, type:string, comment:null), FieldSchema(name:category, type:string, comment:null), FieldSchema(name:source, type:string, comment:null), FieldSchema(name:quantity, type:int, comment:null), FieldSchema(name:totalamount, type:double, comment:null), FieldSchema(name:paymentmethod, type:string, comment:null), FieldSchema(name:recommendedproductid, type:string, comment:null), FieldSchema(name:algorithm, type:string, comment:null)], location:hdfs://localhost:9000/user/itversity/casestudy/kafkastream/event_date=2024-07-04/event_hour=4, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{numFiles=2, totalSize=7383, transient_lastDdlTime=1720126881}) as it already exists
+2024-07-04 21:01:21,724 INFO metastore.HiveMetaStore: 0: get_database: default
+2024-07-04 21:01:21,724 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_database: default	
+2024-07-04 21:01:21,728 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,729 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,756 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,756 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,782 INFO metastore.HiveMetaStore: 0: get_table : db=default tbl=kafka
+2024-07-04 21:01:21,783 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=get_table : db=default tbl=kafka	
+2024-07-04 21:01:21,909 INFO metastore.HiveMetaStore: 0: alter_table: db=default tbl=kafka newtbl=kafka
+2024-07-04 21:01:21,909 INFO HiveMetaStore.audit: ugi=itversity	ip=unknown-ip-addr	cmd=alter_table: db=default tbl=kafka newtbl=kafka	
+2024-07-04 21:01:22,000 INFO command.AlterTableRecoverPartitionsCommand: Recovered all partitions (14).
+2024-07-04 21:01:22,656 INFO codegen.CodeGenerator: Code generated in 310.184963 ms
+2024-07-04 21:01:22,787 INFO spark.ContextCleaner: Cleaned accumulator 11
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 2
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 9
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 1
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 13
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 15
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 18
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 23
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 4
+2024-07-04 21:01:22,788 INFO spark.ContextCleaner: Cleaned accumulator 6
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 12
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 8
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 19
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 22
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 7
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 16
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 24
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 3
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 10
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 14
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 17
+2024-07-04 21:01:22,789 INFO spark.ContextCleaner: Cleaned accumulator 21
+++
+||
+++
+++
+
+2024-07-04 21:01:22,808 INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on itvdelab:44979 in memory (size: 26.4 KB, free: 366.3 MB)
+2024-07-04 21:01:22,811 INFO server.AbstractConnector: Stopped Spark@700b6f7{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2024-07-04 21:01:22,813 INFO ui.SparkUI: Stopped Spark web UI at http://itvdelab:4040
+2024-07-04 21:01:22,814 INFO spark.ContextCleaner: Cleaned accumulator 20
+2024-07-04 21:01:22,814 INFO spark.ContextCleaner: Cleaned accumulator 25
+2024-07-04 21:01:22,814 INFO spark.ContextCleaner: Cleaned accumulator 5
+2024-07-04 21:01:22,869 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+2024-07-04 21:01:22,895 INFO memory.MemoryStore: MemoryStore cleared
+2024-07-04 21:01:22,896 INFO storage.BlockManager: BlockManager stopped
+2024-07-04 21:01:22,897 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+2024-07-04 21:01:22,901 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+2024-07-04 21:01:22,919 INFO spark.SparkContext: Successfully stopped SparkContext
+2024-07-04 21:01:23,420 INFO util.ShutdownHookManager: Shutdown hook called
+2024-07-04 21:01:23,422 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-6124b443-aedb-450c-8e38-684d21ed2b49/pyspark-4543b422-ce99-405d-8036-71fd89438cb4
+2024-07-04 21:01:23,429 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-d4060c86-6e76-4e85-9898-2e13447e0e6e
+2024-07-04 21:01:23,436 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-6124b443-aedb-450c-8e38-684d21ed2b49
